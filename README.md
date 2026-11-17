@@ -4,7 +4,6 @@
 ```
 pip install -r requirements.txt
 ```
-(Java é necessário só para rodar o jar do ANTLR.)
 
 ## Gerar o parser em Python
 ```
