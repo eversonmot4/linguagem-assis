@@ -1,20 +1,8 @@
-int resultado = soma(10, 20);
-int contador = 0;
+num x = 10;
 
-int resultado = soma(10, 20);
-int contador = 0;
-
-dum (contador < 5) {
-    resultado = resultado + contador * 2;
-    contador = contador + 1;
-}
-
-si (resultado >= 30) {
-    resultado = resultado * 2;
-}
-alitersi (resultado == 20) {
-    resultado = resultado - 5;
-}
-aliter {
-    resultado = 0;
+si (x > 5) {
+    num y = 20;
+    y = y + 1;
+} aliter {
+    num z = 30;
 }
