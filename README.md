@@ -2,9 +2,10 @@
 
 # Baixar os requerimentos
 
-pip install -r requirements.txt
-
-antlr4 -Dlanguage=Python3 Expr.g4
+    ```
+        pip install -r requirements.txt
+        antlr4 -Dlanguage=Python3 Expr.g4
+    ```
 
 ---
 
