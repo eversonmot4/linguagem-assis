@@ -1,20 +1,3 @@
-"""
-Visitor de análise semântica da linguagem Assis
-(porte de SemanticVisitor.dart, adaptado à gramática Assis.g4).
-
-Verificações:
-  * variável/função usada sem declaração; redeclaração no mesmo escopo
-  * tipo da expressão x tipo declarado (varDecl, atribuição, argumentos,
-    retorno): permitido apenas o alargamento int -> float
-  * operadores aritméticos exigem int/float; ordenação (< > <= >=) exige
-    int/float; == e != exigem tipos iguais (ou ambos numéricos)
-  * chamada de função: existência, nº de argumentos e tipos
-  * 'redire' fora de função ou com tipo diferente do retorno declarado
-
-Cada visit* de expressão devolve o TIPO da expressão ('int', 'float',
-'char', 'bool', 'String') ou None quando há erro (o erro já foi
-reportado, então não se reporta em cascata).
-"""
 from AssisParser import AssisParser
 from AssisVisitor import AssisVisitor
 from TabelaDeSimbolos import TabelaDeSimbolos

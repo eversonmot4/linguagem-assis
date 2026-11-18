@@ -1,17 +1,3 @@
-"""
-main.py — integra o lexer próprio (lexer_aluno.py) ao parser ANTLR e
-executa a análise semântica, gerando relatorio_saida.txt.
-
-Fluxo:
-    java -jar antlr-4.13.2-complete.jar -Dlanguage=Python3 -visitor Assis.g4
-    python lexer_aluno.py exemplo.txt        # gera tokens.tsv
-    python main.py                           # parser + semântica -> relatorio_saida.txt
-
-Diferença em relação ao main.py original do professor: em vez de
-AssisLexer(FileStream(...)), o CommonTokenStream é alimentado por um
-TokenSource que lê o tokens.tsv (TIPO \\t LINHA \\t COLUNA \\t TEXTO_BASE64),
-como o ListTokenSource usado no projeto Dart.
-"""
 import base64
 import os
 import sys
@@ -19,6 +5,7 @@ import sys
 from antlr4 import CommonTokenStream
 from antlr4.Token import CommonToken, Token
 from antlr4.Lexer import TokenSource
+from antlr4.CommonTokenFactory import CommonTokenFactory
 
 from AssisParser import AssisParser
 from MeuVisitorCustomizado import MeuVisitorCustomizado
@@ -31,6 +18,9 @@ class ListaTokenSource(TokenSource):
     def __init__(self, tokens):
         self._tokens = tokens
         self._i = 0
+        # O parser usa a fábrica do TokenSource para criar tokens "faltando"
+        # quando se recupera de um erro de sintaxe (ex.: ';' ausente).
+        self._factory = CommonTokenFactory.DEFAULT
 
     def nextToken(self):
         tok = self._tokens[min(self._i, len(self._tokens) - 1)]

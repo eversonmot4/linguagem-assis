@@ -1,22 +1,19 @@
-// Programa correto: não deve gerar erros semânticos
 int x = 10;
-float media = 7.5;
-bool ativo = verum;
-String nome = "Everson";
-char letra = "A";
+int x = 5;
+bool ativo = 3;
+String s = y + 1;
 
-funct int soma(int a, int b) {
-    redire a + b;
+funct int dobro(int n) {
+    redire n * 2;
 }
 
-si (x > 5) {
-    int y = 20;
-    y = y + 1;
-    media = y;
-} aliter {
-    int z = 30;
+int r = dobro(1, 2);
+
+int q = dobro("abc");
+
+redire 1;
+
+si (x < "abc") { 
+    x = 1; 
 }
-
-dum (x < 15) x = x + 1;
-
-int total = soma(x, 2) * 3;
+z = 4;

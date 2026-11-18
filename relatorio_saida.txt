@@ -16,11 +16,11 @@ q	|	int	|	Global
 
 RESULTADO SEMÂNTICO
 Análise semântica finalizada com 8 erro(s):
-Erro Semântico [Linha 3]: A variável 'x' já foi declarada neste escopo.
-Erro Semântico [Linha 4]: Incompatibilidade de tipos na declaração de 'ativo': esperado 'bool', mas recebeu 'int'.
-Erro Semântico [Linha 5]: A variável 'y' foi usada sem ter sido declarada.
-Erro Semântico [Linha 11]: A função 'dobro' espera 1 argumento(s), mas recebeu 2.
-Erro Semântico [Linha 12]: Argumento 1 de 'dobro': esperado 'int', mas recebeu 'String'.
-Erro Semântico [Linha 13]: 'redire' usado fora de uma função.
-Erro Semântico [Linha 14]: O operador '<' exige operandos int ou float (recebeu 'int' e 'String').
-Erro Semântico [Linha 15]: A variável 'z' foi usada na atribuição sem ter sido declarada.
+Erro Semântico [Linha 2]: A variável 'x' já foi declarada neste escopo.
+Erro Semântico [Linha 3]: Incompatibilidade de tipos na declaração de 'ativo': esperado 'bool', mas recebeu 'int'.
+Erro Semântico [Linha 4]: A variável 'y' foi usada sem ter sido declarada.
+Erro Semântico [Linha 10]: A função 'dobro' espera 1 argumento(s), mas recebeu 2.
+Erro Semântico [Linha 11]: Argumento 1 de 'dobro': esperado 'int', mas recebeu 'String'.
+Erro Semântico [Linha 12]: 'redire' usado fora de uma função.
+Erro Semântico [Linha 13]: O operador '<' exige operandos int ou float (recebeu 'int' e 'String').
+Erro Semântico [Linha 14]: A variável 'z' foi usada na atribuição sem ter sido declarada.

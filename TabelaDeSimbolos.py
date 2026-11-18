@@ -1,13 +1,3 @@
-"""
-Tabela de símbolos com pilha de escopos (porte de TabelaDeSimbolos.dart).
-
-* Escopo 0 = Global. Cada bloco/função empilha um novo escopo.
-* Funções também ficam na tabela (tipo 'funct'); a assinatura
-  (tipo de retorno + tipos dos parâmetros) é guardada à parte para
-  permitir a checagem de chamadas.
-"""
-
-
 class TabelaDeSimbolos:
     def __init__(self):
         self._escopos: list[dict[str, str]] = [{}]   # pilha de escopos

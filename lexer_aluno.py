@@ -1,21 +1,15 @@
 """
-Lexer da linguagem ASSIS (baseado em AFDs por tabela + maior prefixo).
+ Uso:
+   python lexer_aluno.py exemplo.txt
 
-Uso:
-    python lexer_aluno.py [arquivo] [saida.tsv]
-
-Além de imprimir a tabela de tokens, grava um arquivo TSV (padrão:
-tokens.tsv) para ser lido pelo parser ANTLR (ver assis_token_source.py).
-
-Arquitetura (do professor, preservada):
-  Token  -> AFD (tabela) -> construtores de AFD -> Lexer (maximal munch)
-
-Extensões feitas por necessidade da gramática Assis.g4 (todas documentadas):
-  * AFD.transicao_padrao(): transição "por complemento" (~[...] do ANTLR),
-    pois não dá para enumerar todos os caracteres possíveis na tabela.
-  * AFDs novos: CHAR, STRING, comentário de linha, comentário de bloco e
-    AFDs "detectores de erro" (string aberta, comentário de bloco aberto).
-  * afd_numero() reconhece INT e REAL no mesmo autômato.
+ Estrutura espelhada em lexer_aluno.py
+   1. Token
+   2. AFD (tabela de transições)
+   3. Configuração da linguagem
+   4. Construtores genéricos (literal, trie)
+   5. Construtores específicos (ID, NUM)
+   6. Lexer
+   7. Programa principal
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -111,7 +105,7 @@ class AFD:
 
 
 # =====================================================================
-# 3. CONFIGURAÇÃO DA LINGUAGEM  (fonte: Assis.g4)
+# 3. CONFIGURAÇÃO DA LINGUAGEM ASSIS
 # =====================================================================
 
 # --- Alfabeto de identificadores: [a-zA-Z_][a-zA-Z_0-9]* ------------
