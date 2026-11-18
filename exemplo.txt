@@ -1,5 +1,5 @@
-int x = 10;
 int x = 5;
+
 bool ativo = 3;
 String s = y + 1;
 
@@ -16,4 +16,5 @@ redire 1;
 si (x < "abc") { 
     x = 1; 
 }
+
 z = 4;

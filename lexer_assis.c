@@ -1,21 +1,3 @@
-/*
- * Analisador lexico da Linguagem Assis (MiniC.g4).
- *
- * Uso:
- *   gcc -std=c11 -Wall -Wextra -pedantic lexer_assis.c -o lexer_assis
- *   ./lexer_assis teste.txt
- *   ./lexer_assis teste.txt tokens_saida.txt
- *
- * O programa grava uma sequencia de NOMES de tokens, separados por espaco,
- * no arquivo tokens_saida.txt (ou no caminho passado como segundo argumento).
- * Nao imprime uma tabela de lexemas. Comentarios e espacos sao ignorados.
- *
- * Esta implementacao reproduz as regras lexicas do MiniC.g4 fornecido,
- * inclusive a ordem de prioridade, o maior prefixo e os comandos -> skip.
- * Regras do parser (statement, expr, exprLog...) nao sao tokens.
- * A sequencia textual nao substitui um TokenStream real do ANTLR.
- */
-
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
