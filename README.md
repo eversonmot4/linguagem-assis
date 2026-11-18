@@ -1,6 +1,10 @@
 # Linguagem Assis
 
-A Assis é uma linguagem de programação inspirada em C, com palavras reservadas em latim (si, aliter, dum, funct, redire). Este projeto implementa seu front-end de compilador em Python: um analisador léxico baseado em autômatos finitos determinísticos com a regra do maior prefixo, que grava os tokens em tokens.tsv; um parser gerado pelo ANTLR a partir de Assis.g4, alimentado por esses tokens; e um visitor de análise semântica com tabela de símbolos e escopos, que produz um relatório com a árvore sintática, a tabela e os erros encontrados.
+**Assis é uma linguagem de programação inspirada em C**, com palavras reservadas em **latim (si, aliter, dum, funct, redire)**. Este projeto implementa seu front-end de compilador em Python: 
+
+- Um **analisador léxico** baseado em autômatos finitos determinísticos com a **regra do maior prefixo**, que grava os tokens em `tokens.tsv`; 
+- Um parser gerado pelo **ANTLR** a partir de `Assis.g4`, alimentado por esses tokens; 
+- E um visitor de análise semântica com tabela de símbolos e escopos, que produz um relatório com a árvore sintática, a **tabela e os erros encontrados**.
 
 ## Requisitos:
 ```
