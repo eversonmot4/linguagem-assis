@@ -1,25 +1,6 @@
 ÁRVORE DE SINTAXE (AST)
-(program (statement (varDecl (type int) x = (expr (additiveExpr (multiplicativeExpr (primaryExpr 5)))) ;)) (statement (varDecl (type bool) ativo = (expr (additiveExpr (multiplicativeExpr (primaryExpr 3)))) ;)) (statement (varDecl (type String) s = (expr (additiveExpr (multiplicativeExpr (primaryExpr y)) + (multiplicativeExpr (primaryExpr 1)))) ;)) (statement (functionDecl funct (type int) dobro ( (paramList (param (type int) n)) ) (block { (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr n) * (primaryExpr 2)))) ;)) }))) (statement (varDecl (type int) r = (expr (additiveExpr (multiplicativeExpr (primaryExpr dobro ( (expr (additiveExpr (multiplicativeExpr (primaryExpr 1)))) , (expr (additiveExpr (multiplicativeExpr (primaryExpr 2)))) ))))) ;)) (statement (varDecl (type int) q = (expr (additiveExpr (multiplicativeExpr (primaryExpr dobro ( (expr (additiveExpr (multiplicativeExpr (primaryExpr "abc")))) ))))) ;)) (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr 1)))) ;)) (statement (ifStmt si ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr x))) < (additiveExpr (multiplicativeExpr (primaryExpr "abc")))) ) (statement (block { (statement (exprStmt (expr x = (expr (additiveExpr (multiplicativeExpr (primaryExpr 1))))) ;)) })))) (statement (exprStmt (expr z = (expr (additiveExpr (multiplicativeExpr (primaryExpr 4))))) ;)) <EOF>)
+(program (statement (varDecl (type int) num = (expr (additiveExpr (multiplicativeExpr (primaryExpr 3)))) ;)) (statement (varDecl (type int) nummm ;)) <EOF>)
 
 
-TABELA DE SÍMBOLOS
-NOME	|	TIPO	|	ESCOPO
-------------------------------------------
-x	|	int	|	Global
-ativo	|	bool	|	Global
-s	|	String	|	Global
-dobro	|	funct int(int)	|	Global
-n	|	int	|	Local (Nível 1)
-r	|	int	|	Global
-q	|	int	|	Global
-
-
-RESULTADO SEMÂNTICO
-Análise semântica finalizada com 7 erro(s):
-Erro Semântico [Linha 3]: Incompatibilidade de tipos na declaração de 'ativo': esperado 'bool', mas recebeu 'int'.
-Erro Semântico [Linha 4]: A variável 'y' foi usada sem ter sido declarada.
-Erro Semântico [Linha 10]: A função 'dobro' espera 1 argumento(s), mas recebeu 2.
-Erro Semântico [Linha 12]: Argumento 1 de 'dobro': esperado 'int', mas recebeu 'String'.
-Erro Semântico [Linha 14]: 'redire' usado fora de uma função.
-Erro Semântico [Linha 16]: O operador '<' exige operandos int ou float (recebeu 'int' e 'String').
-Erro Semântico [Linha 20]: A variável 'z' foi usada na atribuição sem ter sido declarada.
+RESULTADO
+1 erro(s) de sintaxe; análise semântica não executada.
