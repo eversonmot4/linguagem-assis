@@ -1,6 +1,34 @@
 ÁRVORE DE SINTAXE (AST)
-(program (statement (varDecl (type int) num = (expr (additiveExpr (multiplicativeExpr (primaryExpr 3)))) ;)) (statement (varDecl (type int) nummm ;)) <EOF>)
+(program (statement (varDecl (type int) limite = (expr (additiveExpr (multiplicativeExpr (primaryExpr 10)))) ;)) (statement (varDecl (type float) taxa = (expr (additiveExpr (multiplicativeExpr (primaryExpr 0.5)))) ;)) (statement (varDecl (type bool) ativo = (expr (additiveExpr (multiplicativeExpr (primaryExpr verum)))) ;)) (statement (varDecl (type String) titulo = (expr (additiveExpr (multiplicativeExpr (primaryExpr "Calculos em Assis")))) ;)) (statement (varDecl (type char) nota = (expr (additiveExpr (multiplicativeExpr (primaryExpr "A")))) ;)) (statement (functionDecl funct (type int) fatorial ( (paramList (param (type int) n)) ) (block { (statement (varDecl (type int) resultado = (expr (additiveExpr (multiplicativeExpr (primaryExpr 1)))) ;)) (statement (varDecl (type int) i = (expr (additiveExpr (multiplicativeExpr (primaryExpr 2)))) ;)) (statement (whileStatement dum ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr i))) <= (additiveExpr (multiplicativeExpr (primaryExpr n)))) ) (statement (block { (statement (exprStmt (expr resultado = (expr (additiveExpr (multiplicativeExpr (primaryExpr resultado) * (primaryExpr i))))) ;)) (statement (exprStmt (expr i = (expr (additiveExpr (multiplicativeExpr (primaryExpr i)) + (multiplicativeExpr (primaryExpr 1))))) ;)) })))) (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr resultado)))) ;)) }))) (statement (functionDecl funct (type float) media ( (paramList (param (type float) a) , (param (type float) b)) ) (block { (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr ( (expr (additiveExpr (multiplicativeExpr (primaryExpr a)) + (multiplicativeExpr (primaryExpr b)))) )) / (primaryExpr 2)))) ;)) }))) (statement (functionDecl funct (type int) maior ( (paramList (param (type int) a) , (param (type int) b)) ) (block { (statement (ifStmt si ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr a))) > (additiveExpr (multiplicativeExpr (primaryExpr b)))) ) (statement (block { (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr a)))) ;)) })))) (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr b)))) ;)) }))) (statement (functionDecl funct (type int) fibonacci ( (paramList (param (type int) n)) ) (block { (statement (ifStmt si ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr n))) <= (additiveExpr (multiplicativeExpr (primaryExpr 1)))) ) (statement (block { (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr n)))) ;)) })))) (statement (returnStmt redire (expr (additiveExpr (multiplicativeExpr (primaryExpr fibonacci ( (expr (additiveExpr (multiplicativeExpr (primaryExpr n)) - (multiplicativeExpr (primaryExpr 1)))) ))) + (multiplicativeExpr (primaryExpr fibonacci ( (expr (additiveExpr (multiplicativeExpr (primaryExpr n)) - (multiplicativeExpr (primaryExpr 2)))) ))))) ;)) }))) (statement (varDecl (type int) f5 = (expr (additiveExpr (multiplicativeExpr (primaryExpr fatorial ( (expr (additiveExpr (multiplicativeExpr (primaryExpr 5)))) ))))) ;)) (statement (varDecl (type float) m = (expr (additiveExpr (multiplicativeExpr (primaryExpr media ( (expr (additiveExpr (multiplicativeExpr (primaryExpr 7.5)))) , (expr (additiveExpr (multiplicativeExpr (primaryExpr 8)))) ))))) ;)) (statement (varDecl (type int) maiorValor = (expr (additiveExpr (multiplicativeExpr (primaryExpr maior ( (expr (additiveExpr (multiplicativeExpr (primaryExpr f5)))) , (expr (additiveExpr (multiplicativeExpr (primaryExpr limite)))) ))))) ;)) (statement (varDecl (type int) fib = (expr (additiveExpr (multiplicativeExpr (primaryExpr fibonacci ( (expr (additiveExpr (multiplicativeExpr (primaryExpr limite)))) ))))) ;)) (statement (ifStmt si ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr maiorValor))) >= (additiveExpr (multiplicativeExpr (primaryExpr 100)))) ) (statement (block { (statement (exprStmt (expr ativo = (expr (additiveExpr (multiplicativeExpr (primaryExpr falsum))))) ;)) })) alitersi ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr maiorValor))) == (additiveExpr (multiplicativeExpr (primaryExpr 50)))) ) (statement (block { (statement (exprStmt (expr taxa = (expr (additiveExpr (multiplicativeExpr (primaryExpr taxa) * (primaryExpr 2))))) ;)) })) aliter (statement (block { (statement (exprStmt (expr taxa = (expr (additiveExpr (multiplicativeExpr (primaryExpr taxa)) + (multiplicativeExpr (primaryExpr 1))))) ;)) })))) (statement (varDecl (type int) contador = (expr (additiveExpr (multiplicativeExpr (primaryExpr 0)))) ;)) (statement (whileStatement dum ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr contador))) < (additiveExpr (multiplicativeExpr (primaryExpr limite)))) ) (statement (block { (statement (exprStmt (expr contador = (expr (additiveExpr (multiplicativeExpr (primaryExpr contador)) + (multiplicativeExpr (primaryExpr 1))))) ;)) (statement (ifStmt si ( (exprLog (additiveExpr (multiplicativeExpr (primaryExpr contador))) == (additiveExpr (multiplicativeExpr (primaryExpr 5)))) ) (statement (block { (statement (varDecl (type int) metade = (expr (additiveExpr (multiplicativeExpr (primaryExpr contador) / (primaryExpr 2)))) ;)) })))) })))) <EOF>)
 
 
-RESULTADO
-1 erro(s) de sintaxe; análise semântica não executada.
+TABELA DE SÍMBOLOS
+NOME	|	TIPO	|	ESCOPO
+------------------------------------------
+limite	|	int	|	Global
+taxa	|	float	|	Global
+ativo	|	bool	|	Global
+titulo	|	String	|	Global
+nota	|	char	|	Global
+fatorial	|	funct int(int)	|	Global
+n	|	int	|	Local (Nível 1)
+resultado	|	int	|	Local (Nível 1)
+i	|	int	|	Local (Nível 1)
+media	|	funct float(float, float)	|	Global
+a	|	float	|	Local (Nível 1)
+b	|	float	|	Local (Nível 1)
+maior	|	funct int(int, int)	|	Global
+a	|	int	|	Local (Nível 1)
+b	|	int	|	Local (Nível 1)
+fibonacci	|	funct int(int)	|	Global
+n	|	int	|	Local (Nível 1)
+f5	|	int	|	Global
+m	|	float	|	Global
+maiorValor	|	int	|	Global
+fib	|	int	|	Global
+contador	|	int	|	Global
+metade	|	int	|	Local (Nível 2)
+
+
+RESULTADO SEMÂNTICO
+Análise semântica concluída sem erros!
