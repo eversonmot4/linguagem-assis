@@ -1,20 +1,14 @@
-int x = 5;
+int a = 5;
+int b = "Alannnn";
 
-bool ativo = 3;
-String s = y + 1;
-
-funct int dobro(int n) {
-    redire n * 2;
+funct int soma(int n1, int n2){
+    int c = 10;
+    redire n1 + n2;
+    funct float Dobrar(float n1){
+        int c = 10.;
+        redire n1;
+    }
 }
+int num = soma(10,10);
 
-int r = dobro(1, 2);
-
-int q = dobro("abc");
-
-redire 1;
-
-si (x < "abc") { 
-    x = 1; 
-}
-
-z = 4;
+Dobrar(num);
